@@ -1,151 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+
+    
+        .navbar {
+            background-color: #1f2937; 
+        }
+
+        .navbar .nav-link,
+        .navbar-brand {
+            color: #ffffff !important;
+        }
+
+        .navbar .nav-link:hover {
+            color: #38bdf8 !important;
+        }
+
+        
+        .login-container {
+            max-width: 420px;
+            margin: 80px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary {
+            background-color: #2563eb;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
 </head>
 
-<style>
-
-    body{
-        background-image:url(https://i0.wp.com/www.kridha.net/wp-content/uploads/2021/01/Green-Forest-Vector-Illustration-Design.jpg?fit=960%2C540&ssl=1);
-        background-size:cover;
-        background-repeat:no-repeat;
-        
-    }
-
-     .container{
-            justify-content:center;
-            background-color:rgb(219, 17, 148, 0.2);
-            border-radius:10px;
-        }
-
-        .container2{
-            justify-content:center;
-            background-color:rgba(129, 9, 166, 0.5);
-            border-radius:10px;
-        }
-
-        .container3{
-            background-color:rgba(236, 192, 62, 0.5);
-            justify-content:center;
-            border:6px solid rgb(83, 49, 5);
-        }
-
-        .container4{
-            background-size:cover;
-            background-repeat:no-repeat;
-            background-color:rgb(219, 17, 148, 0.2);
-        }
-</style>
-<body class="bg-dark text-light">
-
- <nav class="navbar navbar-expand-lg navbar-light border-bottom border-5 border-primary" style="background-color:hwb(304 0% 78%); border-color:#0bf345 !important;">
+<body>
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
 
         <a class="navbar-brand" href="index.html">
-            <img src="Logo.webp">
-        </a>
-        <a class="navbar-brand" href="index.html">
-            <img src="LogoText.webp" style="height:50px; width:auto;">
+            My Website
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-       <div class="collapse navbar-collapse" id="mynavbar">
-    
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="contact us.html"><strong>Contact us </strong></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="about us.html"><strong>About us</strong></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="help.html"><strong>HELP</strong></a>
-        </li>
-    
-       
-    </ul>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="contact us.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help.html">Help</a>
+                </li>
+            </ul>
 
-    <div class="d-flex ms-auto">
-    <button onclick="window.location.href='registration.html'" 
-    class="btn rounded-5 text-light px-4 py-3 nav-link" 
-    style="background-color: #990ddf;">
-        Create Account
-    </button>
-</div>
-    </div>
+            <div class="d-flex ms-auto">
+                <button onclick="window.location.href='registration.html'" 
+                        class="btn btn-outline-light rounded-5 px-4">
+                    Create Account
+                </button>
+            </div>
         </div>
     </div>
-</nav><div class="container mt-5">
-    <div class=" p-4 shadow mx-auto">
-        <h3 class="text-center mb-3">Login</h3>
+</nav>
 
-        <form>
-            <div class="mb-3">
-                <input type="text" id="username" class="form-control" placeholder="Username">
-            </div>
 
-            <div class="mb-3">
-                <input type="password" id="password" class="form-control" placeholder="Password">
-            </div>
+<div class="login-container">
+    <h3 class="text-center mb-4">Login</h3>
 
-            <button type="button" id="loginBtn" class="btn btn-primary w-100" onclick="login()">Login</button>
-        </form>
+    <form>
+        <div class="mb-3">
+            <input type="text" id="username" class="form-control" placeholder="Username">
+        </div>
 
-        <p id="errorMsg" class="text-danger mt-3 text-center"></p>
-        <a href="">Forgot username/password</a>
+        <div class="mb-3">
+            <input type="password" id="password" class="form-control" placeholder="Password">
+        </div>
+
+        <button type="button" id="loginBtn" class="btn btn-primary w-100" onclick="login()">
+            Login
+        </button>
+    </form>
+
+    <p id="errorMsg" class="text-danger mt-3 text-center"></p>
+    <div class="text-center mt-2">
+        <a href="#">Forgot username/password</a>
     </div>
 </div>
 
 <script>
 let attempt_counter = 0;
 
-
 function login(){
-
-    
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
-    do {
-        
-        if (username === "6767" && password === "6868") {
-            alert("Login successful!");
-            attempt_counter = 0;
-            document.getElementById("errorMsg").innerHTML = "";
-            window.location.href = "home.html"; 
-            break; 
-        } else {
-            attempt_counter++;
-            document.getElementById("errorMsg").innerHTML =
-                "Incorrect username and/or password. Attempt " + attempt_counter + " of 3 ";
+    if (username === "6767" && password === "6868") {
+        alert("Login successful!");
+        attempt_counter = 0;
+        document.getElementById("errorMsg").innerHTML = "";
+        window.location.href = "home.html";
+    } else {
+        attempt_counter++;
+        document.getElementById("errorMsg").innerHTML =
+            "Incorrect username or password. Attempt " + attempt_counter + " of 3";
+
+        if (attempt_counter >= 3) {
+            alert("Too many failed attempts!");
+            document.getElementById("loginBtn").disabled = true;
         }
-
-    } while (false); 
-
-    if (attempt_counter >= 3) {
-        alert("Too many failed attempts!");
-        document.getElementById("loginBtn").disabled = true; 
     }
 }
 
-
 function logout() {
-    let confirmLogout = confirm("Exit now?");
-    
-    if (confirmLogout) {
+    if (confirm("Exit now?")) {
         window.location.href = "index.html";
     }
 }
-
-function message(){
-    alert("Not available at this time.");
-}
 </script>
+
 </body>
-</html> 
+</html>
 
