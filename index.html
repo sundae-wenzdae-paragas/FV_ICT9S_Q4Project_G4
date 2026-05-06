@@ -65,7 +65,7 @@ body {
 }
 
 
-/* Target your sidebar class - change '.sidebar' to whatever class you used */
+
 .sidebar {
     background-color: #1b1230; /* Matching your theme */
     height: 100vh;
@@ -76,10 +76,10 @@ body {
 }
 
 .sidebar:hover {
-    width: 280px; /* Expanded width */
+    width: 280px;
 }
 
-/* Optional: Hide text until hovered to keep it clean */
+
 .sidebar .nav-link span {
     opacity: 0;
     transition: opacity 0.2s;
@@ -89,7 +89,6 @@ body {
     opacity: 1;
 }
 
-/* This ensures the content area takes up all remaining space */
 .flex-grow-1 {
     flex-grow: 1;
     transition: margin-left 0.4s ease; /* Matches your sidebar speed */
@@ -97,7 +96,6 @@ body {
     flex-direction: column;
 }
 
-/* Ensure your subject cards container allows for wrapping */
 .main-content {
     display: flex;
     flex-wrap: wrap;
@@ -120,18 +118,39 @@ footer {
 
 <div class="d-flex">
 
-<!-- SIDEBAR -->
-<div class="sidebar">
 
     <h4 class="text-center">Notebook Hub</h4>
     <hr>
 
-    <a class="nav-link" href="index.html">Home</a>
-    <a class="nav-link" href="qotd.html">QOTD</a>
-    <a class="nav-link" href="playplace.html">Play Place</a>
+    <ul class="nav flex-column mt-4">
+
+        <li class="nav-item">
+            <a class="nav-link" href="notebook hub.html">Notebooks</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="qotd.html">QOTD</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="game space.html">Game Space</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">Calendar</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="logout()">Logout</a>
+        </li>
+
+    </ul>
 
 </div>
-
 <!-- MAIN -->
 <div class="container-fluid main-content">
 
