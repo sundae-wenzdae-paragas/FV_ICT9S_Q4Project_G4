@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Notebook Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body {
+    background-color: #120a1a;
+    color: #f5f5f5;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #1f102b;
+    border-right: 1px solid #4a1f66;
+    padding: 25px;
+    position: fixed;
+}
+
+.sidebar h4 {
+    color: #c77fff;
+}
+
+.nav-link {
+    color: #f0ddff;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+}
+
+.nav-link:hover {
+    background: #2b1a45;
+}
+
+.main-content {
+    margin-left: 260px;
+    padding: 35px;
+}
+
+.subject-card {
+    background: #1b1230;
+    border: 1px solid #4a1f66;
+    border-radius: 18px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    background: #24163d;
+}
+
+.subject-card h4 {
+    color: #e9ccff;
+}
+
+.subject-card p {
+    color: #cdb7e8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="d-flex">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <h4 class="text-center">Notebook Hub</h4>
+    <hr>
+
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="qotd.html">QOTD</a>
+    <a class="nav-link" href="playplace.html">Play Place</a>
+
+</div>
+
+<!-- MAIN -->
+<div class="container-fluid main-content">
+
+    <h2 class="mb-4">Choose Your Subject</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="subject-card" onclick="location.href='music.html'">
+                <h4>Music</h4>
+                <p>Rhythm and sound.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="subject-card" onclick="location.href='ict.html'">
+                <h4>ICT</h4>
+                <p>Programming and tech.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="subject-card" onclick="location.href='math.html'">
+                <h4>Math</h4>
+                <p>Numbers and logic.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="subject-card" onclick="location.href='english.html'">
+                <h4>English</h4>
+                <p>Writing and grammar.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="subject-card" onclick="location.href='social studies.html'">
+                <h4>Social Studies</h4>
+                <p>History and society.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="subject-card" onclick="location.href='tle.html'">
+                <h4>TLE</h4>
+                <p>Life skills and work.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="subject-card" onclick="location.href='filipino.html'">
+                <h4>Filipino</h4>
+                <p>Wika at kultura.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="subject-card" onclick="location.href='science.html'">
+                <h4>Science</h4>
+                <p>Experiments and discovery.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="subject-card" onclick="location.href='pe.html'">
+                <h4>PE</h4>
+                <p>Fitness and sports.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="subject-card" onclick="location.href='leader ship training.html'">
+                <h4>Leadership Training</h4>
+                <p>Teamwork and leadership.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

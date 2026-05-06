@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QOTD</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body{
+            background-color: #212529;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box{
+            background-color: #343a40;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1 class="text-warning mb-4">Quote of the Day</h1>
+
+    <p>
+        Pick a number from 1 to 5
+    </p>
+
+    <input type="number" id="quoteInput" class="form-control mb-3" placeholder="Enter number">
+
+    <button class="btn btn-warning w-100" onclick="showQuote()">
+        Show Quote
+    </button>
+
+</div>
+
+<script>
+
+function showQuote(){
+
+    let pick = parseInt(document.getElementById("quoteInput").value);
+
+    let quote = "";
+
+    if(isNaN(pick) || pick < 1 || pick > 5){
+
+        alert("Please enter a number from 1 to 5.");
+        return;
+    }
+
+    switch(pick){
+
+        case 1:
+            quote = "Success is built one small step at a time.";
+            break;
+
+        case 2:
+            quote = "Your future self is watching your choices today.";
+            break;
+
+        case 3:
+            quote = "Even slow progress is still progress.";
+            break;
+
+        case 4:
+            quote = "Dreams work better when you do.";
+            break;
+
+        case 5:
+            quote = "A calm mind is a powerful weapon.";
+            break;
+
+        default:
+            quote = "No quote available.";
+    }
+
+    alert("✨ Quote of the Day ✨\n\n" + quote);
+
+}
+
+</script>
+
+</body>
+</html>
