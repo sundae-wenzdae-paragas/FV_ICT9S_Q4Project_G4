@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background-image:url(https://media.istockphoto.com/id/1174141331/vi/vec-to/n%E1%BB%81n-khoa-h%E1%BB%8Dc-m%C3%A0u-xanh-y-t%E1%BA%BF.jpg?s=170667a&w=0&k=20&c=k9a2zjKDFMchoEGfW87xawjWcKXCiB17MqDzBOhg2yk=);
+    background-color: #eef78c;
+    font-family: "Segoe UI", sans-serif;
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.nav-link {
+    color: #1843AC;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.nav-link:hover {
+    background-color: #FC82E2;
+}
+
+/* Main */
+.main-content {
+    margin-left: 260px;
+    padding: 35px;
+}
+
+.navbar-brand img {
+    height: 125px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    }
+
+.sidebar {
+    background-color: #29b19b; /* Matching your theme */
+    height: 100vh;
+    width: 80px; /* Collapsed width */
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    border-right: 3px solid #e83470;
+    padding:25px;
+    position: sticky; top: 0;
+}
+
+.sidebar:hover {
+    width: 280px; /* Expanded width */
+}
+
+/* Optional: Hide text until hovered to keep it clean */
+.sidebar .nav-link span {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.sidebar:hover .nav-link span {
+    opacity: 1;
+}
+
+
+
+/* This ensures the content area takes up all remaining space */
+.flex-grow-1 {
+    flex-grow: 1;
+    transition: margin-left 0.4s ease; /* Matches your sidebar speed */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fix for the footer to stay at the bottom and match content width */
+footer {
+    width: 100%;
+    background-color: #d81b60; /* Your pink color */
+    padding: 20px;
+    color: white;
+}
+
+.container2{
+    background-color:#b6ec7c;
+    border-radius:20px;
+    border:3px solid rgba(56, 221, 166);
+}
+
+.container2{
+    margin-left:auto;
+}
+
+footer {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    background-color: #d81b60; /* Using your pink theme color */
+    color: white;
+}
+
+/* Ensure the main column stretches to push footer down */
+.flex-grow-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+</style>
+</head>
+
+<div class="d-flex">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+         <a class="navbar-brand" href="index.html">
+            <img src="logo.webp">
+      </a>
+        <ul class="nav flex-column mt-4">
+            <li class="nav-item">
+                <a class="nav-link" href="dashboard.html"><strong>Dashboard</strong></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="notebooks.html"><strong>Notebooks</strong></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="task.html"><strong>Tasks</strong></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="profile.html"><strong>Profile</strong></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="logout()"><strong>Log Out</strong></a>
+            </li>
+        </ul>
+</div>
+
+
+    <div class="flex-grow-1 d-flex flex-column" style="min-height: 100vh;">
+
+        <div class="p-4 flex-grow-1">
+            <h1><strong><kbd style="color:#6a94fe;">Glial-Dashboard</kbd></strong></h1>
+            <h5 class="mb-4">Grade 9 Quarterly Work Plan</h5> <div class="container2 p-4" style="max-width: 900px; margin-left:-6px;">
+                <h4 class="fw-bold">Information and Communications Technology</h4><br>
+                <ul class="text-start"> 
+                    <h5><strong>1st Quarter</strong></h5>
+
+                    <li>Introduction to HTML</li>
+                    <li>Basic CSS Styling</li>
+                    <li>Quarter Project</li>
+                </ul><br>
+
+                <ul class="text-start"> 
+                    <h5><strong>2nd Quarter</strong></h5>
+
+                    <li>Introduction to Bootstrap</li>
+                    <li>Boostrap with Forms</li>
+                    <li>Quarter Project</li>
+                </ul><br>
+
+                <ul class="text-start"> 
+                    <h5><strong>3rd Quarter</strong></h5>
+
+                    <li>Introduction to JavaScript</li>
+                    <li>JavaScript data types, operators and variables</li>
+                    <li>JavaScript functions and events</li>
+                    <li>Quarter Project</li>
+                </ul><br>
+
+                <ul class="text-start"> 
+                    <h5><strong>4th Quarter</strong></h5>
+
+                    <li>Conditional Statements</li>
+                    <li>Iteration Statements</li>
+                    <li>Quarter Project</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="w-100 p-4 mt-auto" style="background-color: #d81b60;">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <img src="logo.webp" class="rounded-circle bg-light" style="height: 200px;">
+                    </div>
+                    <div class="col-md-8">
+                        <h5><strong>Sources:</strong></h5>
+                        
+                        <a href="https://stock.adobe.com/ph/search?k=%22medical+background%22" class="text-info">Adobe Stock Medical Background</a><br>
+    
+                        <a href="https://www.freeconvert.com/webp-converter" class="text-info">FreeConvert WebP</a><br>
+    
+                        <a href="https://imagetocartoon.com/" class="text-info">Image to Cartoon</a><br>
+    
+                        <a href="https://www.istockphoto.com/vi/vec-to/n%E1%BB%81n-khoa-h%E1%BB%8Dc-m%C3%A0u-xanh-y-t%E1%BA%BF-gm1174141331-326435470" class="text-info">iStock Science Background</a><br>
+    
+                        <a href="https://tools.picsart.com/text/font-generator/bold/" class="text-info">Picsart Font Generator</a><br>
+    
+                        <a href="https://pixlr.com/express/" class="text-info">Pixlr Express</a><br>
+    
+                        <a href="https://www.vecteezy.com/vector-art/21620258-cute-graduation-hat-cartoon-icon-vector-illustration-minimal-vector-education-diploma-for-student-study-success-render-illustration" class="text-info">Vecteezy Graduation Hat</a>
+    
+                         
+</div>
+                    </div>
+                </div>
+                <hr>
+                <p class="text-center mb-0">©Group 5 | 9-Sapphire © 2026</p>
+            </div>
+        </footer>
+
+    </div> 
+
+
+<script>
+function logout(){
+    let confirmLogout = confirm("Exit now?");
+    if(confirmLogout){
+        window.location.href = "index.html";
+    }
+}
+</script>
+
+</body>
+</html>
