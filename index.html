@@ -2,22 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Login Form</title>
     <style>
-        body {
-            background-color: #f4f6f9;
-        }
+     body{
+        background-image:url(https://t4.ftcdn.net/jpg/07/89/54/45/360_F_789544591_md4iUVWv0edracMhQbEhmMdqS0bz7UZj.jpg);
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-color: rgba(128, 5, 128, 0.2);
+        background-blend-mode: overlay;
+    }
 
-    
-        .navbar {
-            background-color: #1f2937; 
-        }
+    .navbar-brand img {
+    height: 90px;
+    width: auto;
+    }
 
-        .navbar .nav-link,
-        .navbar-brand {
-            color: #ffffff !important;
+    .navbar-brand2 img {
+        height:80px;
+        width:auto;
+        margin-top:8px;
+    } 
+
+     .nav-link {
+            color: #1843AC !important;
         }
 
         .navbar .nav-link:hover {
@@ -42,60 +51,111 @@
         .btn-primary:hover {
             background-color: #1d4ed8;
         }
+    
+    .login-container{
+        background-color:rgba(199, 246, 88);
+        border-radius:20px;
+        border:10px solid rgba(18, 218, 151, 3);
+    }
     </style>
 </head>
-
 <body>
-<nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom border-5 border-primary" style="background-color: #29B19B; border-color:#4f089a !important;">
     <div class="container-fluid">
 
         <a class="navbar-brand" href="index.html">
-            Brain wave
+            <img src="logo.webp">
+        </a>
+        <a class="navbar-brand2" href="index.html">
+            <img src="text.webp" style="margin-left: -10px;">
         </a>
 
-        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="mynavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="contact us.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about us.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="help.html">Help</a>
-                </li>
-            </ul>
+       <div class="collapse navbar-collapse" id="mynavbar">
+    
+    <ul class="navbar-nav" style="margin-left:10px;">
+        <li class="nav-item">
+            <a class="nav-link" href="dashboard.html" id="error" onclick="errorButtons(event, 'error')"><strong>Dashboard</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="notebooks.html" id="error2" onclick="errorButtons(event, 'error2')"><strong>Notebooks</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="tasks.html" id="error3" onclick="errorButtons(event, 'error3')"><strong>Tasks</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="profile.html" id="error4" onclick="errorButtons(event, 'error4')"><strong>Profile</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="error5" onclick="errorButtons(event, 'error5')"><strong>Log Out</strong></a>
+        </li>
+    </ul>
 
-            </div>
+    </div>
         </div>
     </div>
 </nav>
 
+<script>    
+    function errorButtons(event, clickedId) {
+    event.preventDefault();
+
+    let DashboardMsg = "Dashboard is locked. You have to log in first!";
+    let NotebooksMsg = "Notebooks are locked. You have to log in first!";
+    let TasksMsg = "Tasks are locked. You have to log in first!";
+    let ProfileMsg = "Profile is locked. You have to log in first!";
+    let LogOutMsg = "You don't have an account yet. You have to log in first!";
+
+    if (clickedId === "error") {
+        alert(DashboardMsg);
+    } 
+    else if (clickedId === "error2") {
+        alert(NotebooksMsg);
+    }
+    else if (clickedId === "error3") {
+        alert(TasksMsg);
+    }
+    else if (clickedId === "error4") {
+        alert(ProfileMsg);
+    }
+    else if (clickedId === "error5") {
+        alert(LogOutMsg);
+    }
+
+}
+</script>
+
+
 
 <div class="login-container">
-    <h3 class="text-center mb-4">Login</h3>
+    <h3 class="text-center mb-4 fw-bold"><strong>Login</strong></h3>
+
+    <p class="text-center"><kbd style="color:#38bdf8;">Log back in to access your school information and tasks again!</kbd></p>
 
     <form>
         <div class="mb-3">
-            <input type="text" id="username" class="form-control" placeholder="Username">
-        </div>
+            <input type="text" id="username" class="form-control" placeholder="Username"list="username-suggestions" autocomplete="off">
+    
+    <datalist id="username-suggestions">
+        <option value="What's after 67">
+    </datalist>
+</div>
 
         <div class="mb-3">
             <input type="password" id="password" class="form-control" placeholder="Password">
         </div>
 
-        <button type="button" id="loginBtn" class="btn btn-primary w-100" onclick="login()">
+        <button type="button" id="loginBtn" class="btn w-100 fw-bold" style="background-color:#EA88D2;" onclick="login()">
             Login
         </button>
     </form>
 
     <p id="errorMsg" class="text-danger mt-3 text-center"></p>
     <div class="text-center mt-2">
-        <a href="#">Forgot username/password</a>
+        <a href="#" class="text-light"><strong>Forgot username/password</strong></a>
     </div>
 </div>
 
@@ -106,11 +166,11 @@ function login(){
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
-    if (username === "6767" && password === "6868") {
+    if (username === "What's after 67" && password === "68") {
         alert("Login successful!");
         attempt_counter = 0;
         document.getElementById("errorMsg").innerHTML = "";
-        window.location.href = "home.html";
+        window.location.href = "dashboard.html";
     } else {
         attempt_counter++;
         document.getElementById("errorMsg").innerHTML =
@@ -123,13 +183,11 @@ function login(){
     }
 }
 
-function logout() {
-    if (confirm("Exit now?")) {
-        window.location.href = "index.html";
-    }
-}
+//function logout() {
+   // if (confirm("Exit now?")) {
+      //  window.location.href = "index.html";
+   // }
+//}
 </script>
-
 </body>
 </html>
-
