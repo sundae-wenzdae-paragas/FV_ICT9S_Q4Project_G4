@@ -106,9 +106,30 @@ footer {
     flex-direction: column;
 }
 
+.row2{
+    background-size:cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    flex-grow: 1; 
+    width: 100%;
+    padding: 40px;
+
+    /*Text Color
+    color: white;  */
+    
+    /* This creates that dark overlay effect from your screenshots 
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);*/
+
+
+}
+
+a{
+    color:aliceblue;
+}
+
 </style>
 </head>
-
 <div class="d-flex">
 
     <!-- Sidebar -->
@@ -142,44 +163,54 @@ footer {
 
     <div class="flex-grow-1 d-flex flex-column" style="min-height: 100vh;">
 
-        <div class="p-4 flex-grow-1">
-            <h1><strong><kbd style="color:#6a94fe;">Glial-Dashboard</kbd></strong></h1>
-            <h5 class="mb-4">Grade 9 Quarterly Work Plan</h5> <div class="container2 p-4" style="max-width: 900px; margin-left:-6px;">
-                <h4 class="fw-bold">Information and Communications Technology</h4><br>
-                <ul class="text-start"> 
-                    <h5><strong>1st Quarter</strong></h5>
+    <div class="row2 flex-grow-1">
+        <h1><strong><kbd style="color:#6a94fe;">Glial-Dashboard</kbd></strong></h1>
+        <h5 class="mb-4">Grade 9 Quarterly Work Plan</h5> 
 
-                    <li>Introduction to HTML</li>
-                    <li>Basic CSS Styling</li>
-                    <li>Quarter Project</li>
-                </ul><br>
+        <div class="content-overlay p-4" style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; ">
+            <h4 class="fw-bold">Information and Communications Technology</h4>
+            <br>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="text-start"> 
+                        <h5><strong>1st Quarter</strong></h5>
+                        <li>Introduction to HTML</li>
+                        <li>Basic CSS Styling</li>
+                        <li>Quarter Project</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="text-start"> 
+                        <h5><strong>2nd Quarter</strong></h5>
+                        <li>Introduction to Bootstrap</li>
+                        <li>Bootstrap with Forms</li>
+                        <li>Quarter Project</li>
+                    </ul>
+                </div>
+            </div>
 
-                <ul class="text-start"> 
-                    <h5><strong>2nd Quarter</strong></h5>
-
-                    <li>Introduction to Bootstrap</li>
-                    <li>Boostrap with Forms</li>
-                    <li>Quarter Project</li>
-                </ul><br>
-
-                <ul class="text-start"> 
-                    <h5><strong>3rd Quarter</strong></h5>
-
-                    <li>Introduction to JavaScript</li>
-                    <li>JavaScript data types, operators and variables</li>
-                    <li>JavaScript functions and events</li>
-                    <li>Quarter Project</li>
-                </ul><br>
-
-                <ul class="text-start"> 
-                    <h5><strong>4th Quarter</strong></h5>
-
-                    <li>Conditional Statements</li>
-                    <li>Iteration Statements</li>
-                    <li>Quarter Project</li>
-                </ul>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <ul class="text-start"> 
+                        <h5><strong>3rd Quarter</strong></h5>
+                        <li>Introduction to JavaScript</li>
+                        <li>Data types, operators, and variables</li>
+                        <li>Functions and events</li>
+                        <li>Quarter Project</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="text-start"> 
+                        <h5><strong>4th Quarter</strong></h5>
+                        <li>Conditional Statements</li>
+                        <li>Iteration Statements</li>
+                        <li>Quarter Project</li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </div>
 
         <footer class="w-100 p-4 mt-auto" style="background-color: #d81b60;">
             <div class="container-fluid">
@@ -190,19 +221,19 @@ footer {
                     <div class="col-md-8">
                         <h5><strong>Sources:</strong></h5>
                         
-                        <a href="https://stock.adobe.com/ph/search?k=%22medical+background%22" class="text-info">Adobe Stock Medical Background</a><br>
+                        <a href="https://stock.adobe.com/ph/search?k=%22medical+background%22">Adobe Stock Medical Background</a><br>
     
-                        <a href="https://www.freeconvert.com/webp-converter" class="text-info">FreeConvert WebP</a><br>
+                        <a href="https://www.freeconvert.com/webp-converter">FreeConvert WebP</a><br>
     
-                        <a href="https://imagetocartoon.com/" class="text-info">Image to Cartoon</a><br>
+                        <a href="https://imagetocartoon.com/">Image to Cartoon</a><br>
     
-                        <a href="https://www.istockphoto.com/vi/vec-to/n%E1%BB%81n-khoa-h%E1%BB%8Dc-m%C3%A0u-xanh-y-t%E1%BA%BF-gm1174141331-326435470" class="text-info">iStock Science Background</a><br>
+                        <a href="https://www.istockphoto.com/vi/vec-to/n%E1%BB%81n-khoa-h%E1%BB%8Dc-m%C3%A0u-xanh-y-t%E1%BA%BF-gm1174141331-326435470">iStock Science Background</a><br>
     
-                        <a href="https://tools.picsart.com/text/font-generator/bold/" class="text-info">Picsart Font Generator</a><br>
+                        <a href="https://tools.picsart.com/text/font-generator/bold/">Picsart Font Generator</a><br>
     
-                        <a href="https://pixlr.com/express/" class="text-info">Pixlr Express</a><br>
+                        <a href="https://pixlr.com/express/">Pixlr Express</a><br>
     
-                        <a href="https://www.vecteezy.com/vector-art/21620258-cute-graduation-hat-cartoon-icon-vector-illustration-minimal-vector-education-diploma-for-student-study-success-render-illustration" class="text-info">Vecteezy Graduation Hat</a>
+                        <a href="https://www.vecteezy.com/vector-art/21620258-cute-graduation-hat-cartoon-icon-vector-illustration-minimal-vector-education-diploma-for-student-study-success-render-illustration">Vecteezy Graduation Hat</a>
     
                          
 </div>
